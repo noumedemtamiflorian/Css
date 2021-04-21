@@ -1,0 +1,100 @@
+div {
+    height: 40px;
+    width: 70%;
+    background: black;
+    margin: 50px auto;
+    border-radius: 5px;
+}
+
+#rect {
+    /* definition du nom de l'animation */
+    animation-name: rainbow;
+    /* definition de sa duree */
+    animation-duration: 4s;
+}
+
+/* travail */
+
+@keyframes rainbow {
+    0% {
+        background-color: red;
+    }
+    50% {
+        background-color: green;
+    }
+    100% {
+        background-color: yellow;
+    }
+}
+
+/* Button*/
+
+button {
+    border-radius: 5px;
+    color: white;
+    background-color: #0F5897;
+    padding: 5px 10px 8px 10px;
+}
+
+button:hover {
+    animation-name: background-color;
+    animation-duration: 500ms;
+    /* Pour que les dernieres modifications de l'animation reste apres 500ms */
+    animation-fill-mode: forwards;
+}
+
+@keyframes background-color {
+    100% {
+        background-color: #f10337;
+    }
+}
+
+/* la bal */
+
+#ball {
+    width: 70px;
+    height: 70px;
+    margin: 50px auto;
+    position: fixed;
+    left: 20%;
+    border-radius: 50%;
+    background: linear-gradient( 35deg, #ccffff, #ffcccc);
+    animation-name: fade;
+    animation-duration: 3s;
+}
+
+@keyframes fade {
+    50% {
+        left: 60%;
+        opacity: 0.1;
+    }
+}
+
+/* ball1 */
+
+#ball1 {
+    width: 100px;
+    height: 100px;
+    margin: 50px auto;
+    position: relative;
+    border-radius: 50%;
+    background: linear-gradient( 35deg, #ccffff, #ffcccc);
+    animation-name: bounce;
+    animation-duration: 1s;
+    /* definition du nombre de repetition */
+    animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+    0% {
+        top: 0px;
+    }
+    50% {
+        top: 249px;
+        width: 130px;
+        height: 70px;
+    }
+    100% {
+        top: 0px;
+    }
+}
